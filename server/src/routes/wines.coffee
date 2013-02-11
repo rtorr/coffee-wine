@@ -16,7 +16,7 @@ wineDataBase.open (err, wineDataBase) ->
     wineDataBase.collection 'wines', safe:true, (err, collection) ->
       if err
         console.log "The 'wines' collection doesn't exist. Creating it with sample data..."
-        populateDB()
+        populateWineDatabase()
 
 # ------------------------------ #
 
@@ -69,6 +69,7 @@ exports.deleteWine = (req, res) ->
         req.send req.body
 
 populateWineDatabase = ->
+
   wines = [
     name: "CHATEAU DE SAINT COSME"
     year: "2009"

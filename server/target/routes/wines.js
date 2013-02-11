@@ -24,7 +24,7 @@
       }, function(err, collection) {
         if (err) {
           console.log("The 'wines' collection doesn't exist. Creating it with sample data...");
-          return populateDB();
+          return populateWineDatabase();
         }
       });
     }
